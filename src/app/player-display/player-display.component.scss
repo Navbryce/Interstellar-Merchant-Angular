@@ -1,0 +1,11 @@
+.skills { 
+    & > div {
+        margin-left: 20pt;
+    }
+    p {
+        display: block;
+        
+        margin: 0;
+        padding: 0;
+    }
+}

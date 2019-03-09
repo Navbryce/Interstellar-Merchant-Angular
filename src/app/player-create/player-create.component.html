@@ -1,0 +1,36 @@
+<div>
+    <div>
+        <label>Name: </label>
+        <input #nameElement="ngModel" required minlength = "1"
+            [(ngModel)]="name">
+    </div>
+    <div>
+        <select [(ngModel)]="difficulty">
+            <option value="{{difficultyEnum[difficulty]}}" *ngFor="let difficulty of difficulties">
+                {{difficulty}}
+            </option>
+        </select>
+    </div>
+    <div>
+        <label>Pilot: </label>
+        <input type="number" min="0" max="16" value="0" [(ngModel)]="skills[0]">
+    </div>
+    <div>
+        <label>Fighter: </label>
+        <input type="number" min="0" max="16" value="0" [(ngModel)]="skills[1]">
+    </div>
+    <div>
+        <label>Trader: </label>
+        <input type="number" min="0" max="16" value="0" [(ngModel)]="skills[2]">
+    </div>
+    <div>
+        <label>Engineer: </label>
+        <input type="number" min="0" max="16" value="0" [(ngModel)]="skills[3]">
+    </div>
+</div>
+<button (click)="createCharacter()">Create Character</button>
+<div>
+    <p class="alert">
+        {{alertText}}
+    </p>
+</div>

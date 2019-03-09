@@ -1,0 +1,17 @@
+<div>
+    <p>Name: {{player.name}}</p>
+    <p>Skillpoints Remaining: {{player.getAvailableSkillPoints()}}</p>
+    <div class="skills" style="display: flex;">
+        <div>
+            <p>Pilot: {{player.skills[0]}}</p>
+            <p>Fighter: {{player.skills[1]}}</p>
+        </div>
+        <div>
+            <p>Trader: {{player.skills[2]}}</p>
+            <p>Fighter: {{player.skills[3]}}</p>
+        </div>
+    </div>
+    <p>Difficulty: {{difficultyEnum[player.config.gameDifficulty]}}</p>
+    <p>Credits: {{player.credits}}</p>
+    <p>Spaceship: {{shipEnum[player.ship.type]}}</p>
+</div>
