@@ -1,2 +1,2 @@
-export * from './Player';
+export * from './player';
 export * from './universe';
