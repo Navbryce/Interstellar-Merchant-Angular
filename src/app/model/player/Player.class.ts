@@ -27,8 +27,8 @@ export class Player {
         }
         this.skills = Object.assign([], skills);
         if (!this.appropriateNumberOfSkillPoints()) {
-            throw new Error('You have more points than the max of ' +
-            Player.MAXIMUM_POINTS);
+            throw new Error('You don\'t have ' +
+            Player.MAXIMUM_POINTS + ' points');
         }
 
         // handle other parameters
@@ -53,7 +53,7 @@ export class Player {
      * @return if the player does not have more than the max skill points
      */
     public appropriateNumberOfSkillPoints(): boolean {
-        return this.getTotalSkillPoints() <= Player.MAXIMUM_POINTS;
+        return this.getTotalSkillPoints() === Player.MAXIMUM_POINTS;
     }
 
     /**
